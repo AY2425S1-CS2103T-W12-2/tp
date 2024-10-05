@@ -258,33 +258,61 @@ _{Explain here how the data archiving feature will be implemented}_
 
 ## **Appendix: Requirements**
 
-### Product scope
+# Product scope
 
-**Target user profile**:
+## Target user profile:
 
-* has a need to manage a significant number of contacts
-* prefer desktop apps over other types
-* can type fast
-* prefers typing to mouse interactions
-* is reasonably comfortable using CLI apps
+- Has a need to manage a significant number of volunteers
+- Prefer desktop apps over other types
+- Can type fast
+- Prefers typing to mouse interactions
+- Is reasonably comfortable using CLI apps
+- Works in non-profit organizations or event management
+- Values efficiency in coordinating volunteers and events
+- May have experience with database management systems
+- Likely to be in roles such as Volunteer Coordinator or Events Director
 
-**Value proposition**: manage contacts faster than a typical mouse/GUI driven app
+## Value proposition:
+Manage volunteers and events faster than a typical mouse/GUI driven app
 
+## Key features:
 
-### User stories
+1. Rapid volunteer data entry and editing using keyboard shortcuts
+2. Command-line interface for advanced operations
+3. Quick search functionality for volunteers and events
+4. Bulk operations for efficient management of multiple volunteers or events
+5. Event creation and management with volunteer assignment
+6. Volunteer hours tracking and reporting
+7. Robust tagging system for categorizing volunteers and events
+8. Export functionality for generating reports
 
-Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unlikely to have) - `*`
+# User stories
 
-| Priority | As a …​                                    | I want to …​                     | So that I can…​                                                        |
-| -------- | ------------------------------------------ | ------------------------------ | ---------------------------------------------------------------------- |
-| `* * *`  | new user                                   | see usage instructions         | refer to instructions when I forget how to use the App                 |
-| `* * *`  | user                                       | add a new person               |                                                                        |
-| `* * *`  | user                                       | delete a person                | remove entries that I no longer need                                   |
-| `* * *`  | user                                       | find a person by name          | locate details of persons without having to go through the entire list |
-| `* *`    | user                                       | hide private contact details   | minimize chance of someone else seeing them by accident                |
-| `*`      | user with many persons in the address book | sort persons by name           | locate a person easily                                                 |
+Priorities: High (must have) - \* \* \* , Medium (nice to have) - \* \* , Low (unlikely to have) - \*
 
-*{More to be added}*
+| Priority   | User                                    | Function                               | Benefit                                                                              |
+|------------|-----------------------------------------|----------------------------------------|--------------------------------------------------------------------------------------|
+| \* \* \*   | HR department employee                  | Remove volunteers                      | Keep volunteer records up to date                                                    |
+| \* \* \*   | HR department employee                  | View volunteers                        | Quickly access and review the list of all volunteers                                 |
+| \* \* \*   | HR department employee                  | Export volunteer information           | Generate reports for internal use                                                    |
+| \* \* \*   | Events director                         | Create events                          | Organize new events to engage volunteers                                             |
+| \* \* \*   | Events director                         | Remove events                          | Keep the events list clean and up to date                                            |
+| \* \* \*   | Events director                         | View events                            | Get an overview of upcoming and past events                                          |
+| \* \* \*   | Events director                         | Add volunteer to event                 | Assign volunteers to specific events                                                 |
+| \* \* \*   | HR department employee                  | Add event to volunteer                 | Track the events a volunteer has participated in                                     |
+| \* \* \*   | Events director                         | Remove volunteer from event            | Keep the list of volunteers attending the event updated                              |
+| \* \* \*   | HR department employee                  | Remove event from volunteer            | Keep the events list for the volunteer clean and up to date                          |
+| \* \*      | HR department employee                  | Edit volunteer information             | Update volunteer details such as availability, hours, etc.                           |
+| \* \*      | Events director                         | Filter volunteers by availability      | Find available volunteers for a particular event                                     |
+| \* \*      | Events director, HR department employee | Search/filter event by name            | Locate specific events quickly                                                       |
+| \* \*      | Events director                         | View volunteers for a particular event | Find out how many volunteers have signed up for the event                            |
+| \* \*      | Events director, HR department employee | Search volunteers by name              | Find a specific volunteer by their name                                              |
+| \* \*      | HR department employee                  | Track volunteer hours                  | Monitor and log the hours each volunteer has worked                                  |
+| \*         | General user                            | View event details per volunteer       | See which events a volunteer participated in                                         |
+| \*         | HR department employee                  | View volunteer participation history   | Track volunteer engagement with past events                                          |
+| \*         | General user                            | Toggle view options for events         | Customize how events are displayed in the app                                        |
+| \*         | General user                            | Dark mode                              | Enhance the app's user experience for those who prefer a darker interface            |
+| \*         | General user                            | Accessibility features                 | Improve usability for visually impaired users through larger fonts and color changes |
 
 ### Use cases
 
