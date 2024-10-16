@@ -1,5 +1,7 @@
 package seedu.address.ui;
 
+import java.io.IOException;
+import java.net.URI;
 import java.util.logging.Logger;
 
 import javafx.fxml.FXML;
@@ -64,8 +66,17 @@ public class HelpWindow extends UiPart<Stage> {
      */
     public void show() {
         logger.fine("Showing help page about the application.");
-        getRoot().show();
-        getRoot().centerOnScreen();
+        try {
+            //@@ author Advanced & fabian -reused
+            // the method on the line below, used to open a webpage using the default browser from the javafx app
+            // is reused from the StackOverflow post asked by Advanced and edited by fabian
+            // source: https://stackoverflow.com/questions/16604341/how-can-i-open-the-default-system-browser-from-a-java-fx-application
+            java.awt.Desktop.getDesktop().browse(URI.create(USERGUIDE_URL));
+            //@@ author
+        } catch (IOException ioe) {
+            getRoot().show();
+            getRoot().centerOnScreen();
+        }
     }
 
     /**
