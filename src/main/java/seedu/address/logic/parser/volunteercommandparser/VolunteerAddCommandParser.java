@@ -1,12 +1,9 @@
 package seedu.address.logic.parser.volunteercommandparser;
 
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
-import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_AVAILABLE_DATE;
 import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_EMAIL;
-import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_END_TIME;
 import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_NAME;
 import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_PHONE;
-import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_START_TIME;
 
 import java.util.stream.Stream;
 
@@ -17,11 +14,9 @@ import seedu.address.logic.parser.Parser;
 import seedu.address.logic.parser.Prefix;
 import seedu.address.logic.parser.VolunteerParserUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
-import seedu.address.model.volunteer.Date;
 import seedu.address.model.volunteer.Email;
 import seedu.address.model.volunteer.Name;
 import seedu.address.model.volunteer.Phone;
-import seedu.address.model.volunteer.Time;
 import seedu.address.model.volunteer.Volunteer;
 
 /**
@@ -36,30 +31,24 @@ public class VolunteerAddCommandParser implements Parser<VolunteerAddCommand> {
     public VolunteerAddCommand parse(String args) throws ParseException {
         ArgumentMultimap argMultimap =
                 ArgumentTokenizer.tokenize(args, VOLUNTEER_PREFIX_NAME, VOLUNTEER_PREFIX_PHONE,
-                        VOLUNTEER_PREFIX_EMAIL, VOLUNTEER_PREFIX_AVAILABLE_DATE,
-                        VOLUNTEER_PREFIX_START_TIME, VOLUNTEER_PREFIX_END_TIME);
+                        VOLUNTEER_PREFIX_EMAIL);
 
         // Check if mandatory prefixes are present and preamble is empty
         if (!arePrefixesPresent(argMultimap, VOLUNTEER_PREFIX_NAME, VOLUNTEER_PREFIX_PHONE,
-                VOLUNTEER_PREFIX_EMAIL, VOLUNTEER_PREFIX_AVAILABLE_DATE,
-                VOLUNTEER_PREFIX_START_TIME, VOLUNTEER_PREFIX_END_TIME)
+                VOLUNTEER_PREFIX_EMAIL)
                 || !argMultimap.getPreamble().isEmpty()) {
             throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, VolunteerAddCommand.MESSAGE_USAGE));
         }
 
         // Ensure no duplicate prefixes are provided
         argMultimap.verifyNoDuplicatePrefixesFor(VOLUNTEER_PREFIX_NAME, VOLUNTEER_PREFIX_PHONE,
-                VOLUNTEER_PREFIX_EMAIL, VOLUNTEER_PREFIX_AVAILABLE_DATE,
-                VOLUNTEER_PREFIX_START_TIME, VOLUNTEER_PREFIX_END_TIME);
+                VOLUNTEER_PREFIX_EMAIL);
 
         Name name = VolunteerParserUtil.parseName(argMultimap.getValue(VOLUNTEER_PREFIX_NAME).get());
         Phone phone = VolunteerParserUtil.parsePhone(argMultimap.getValue(VOLUNTEER_PREFIX_PHONE).get());
         Email email = VolunteerParserUtil.parseEmail(argMultimap.getValue(VOLUNTEER_PREFIX_EMAIL).get());
-        Date availableDate = VolunteerParserUtil.parseDate(argMultimap.getValue(VOLUNTEER_PREFIX_AVAILABLE_DATE).get());
-        Time startTime = VolunteerParserUtil.parseTime(argMultimap.getValue(VOLUNTEER_PREFIX_START_TIME).get());
-        Time endTime = VolunteerParserUtil.parseTime(argMultimap.getValue(VOLUNTEER_PREFIX_END_TIME).get());
 
-        Volunteer volunteer = new Volunteer(name, phone, email, availableDate, startTime, endTime);
+        Volunteer volunteer = new Volunteer(name, phone, email);
         return new VolunteerAddCommand(volunteer);
     }
 

@@ -22,9 +22,6 @@ public class Volunteer {
     private final Email email;
 
     // Data fields
-    private final Date availableDate;
-    private final Time startTimeAvailability;
-    private final Time endTimeAvailability;
     private final ObservableList<String> involvedIn;
 
     /**
@@ -33,31 +30,22 @@ public class Volunteer {
      * @param name The name of the volunteer.
      * @param phone The phone number of the volunteer.
      * @param email The email address of the volunteer.
-     * @param availableDate The date the volunteer is available.
-     * @param startTimeAvailability The start time of the volunteer's availability.
-     * @param endTimeAvailability The end time of the volunteer's availability.
      */
-    public Volunteer(Name name, Phone phone, Email email, Date availableDate,
-                     Time startTimeAvailability, Time endTimeAvailability, List<String> involvedIn) {
-        requireAllNonNull(name, phone, email, availableDate, startTimeAvailability, endTimeAvailability);
+    public Volunteer(Name name, Phone phone, Email email, List<String> involvedIn) {
+        requireAllNonNull(name, phone, email);
 
         this.id = nextId++;
         this.name = name;
         this.phone = phone;
         this.email = email;
-        this.availableDate = availableDate;
-        this.startTimeAvailability = startTimeAvailability;
-        this.endTimeAvailability = endTimeAvailability;
         this.involvedIn = FXCollections.observableArrayList(involvedIn);
     }
 
     /**
      * Constructs an {@code Volunteer} without events.
      */
-    public Volunteer(Name name, Phone phone, Email email, Date availableDate,
-                 Time startTimeAvailability, Time endTimeAvailability) {
-        this(name, phone, email, availableDate, startTimeAvailability, endTimeAvailability,
-                FXCollections.observableArrayList());
+    public Volunteer(Name name, Phone phone, Email email) {
+        this(name, phone, email, FXCollections.observableArrayList());
     }
 
     public boolean isInvolvedInEvent(String eventName) {
@@ -78,18 +66,6 @@ public class Volunteer {
 
     public Email getEmail() {
         return email;
-    }
-
-    public Date getAvailableDate() {
-        return availableDate;
-    }
-
-    public Time getStartTimeAvailability() {
-        return startTimeAvailability;
-    }
-
-    public Time getEndTimeAvailability() {
-        return endTimeAvailability;
     }
 
     /**
@@ -124,10 +100,7 @@ public class Volunteer {
         Volunteer otherVolunteer = (Volunteer) other;
         return name.equals(otherVolunteer.name)
                 && phone.equals(otherVolunteer.phone)
-                && email.equals(otherVolunteer.email)
-                && availableDate.equals(otherVolunteer.availableDate)
-                && startTimeAvailability.equals(otherVolunteer.startTimeAvailability)
-                && endTimeAvailability.equals(otherVolunteer.endTimeAvailability);
+                && email.equals(otherVolunteer.email);
     }
 
     /**
@@ -167,7 +140,7 @@ public class Volunteer {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, phone, email, availableDate, startTimeAvailability, endTimeAvailability);
+        return Objects.hash(name, phone, email);
     }
 
     @Override
@@ -175,8 +148,6 @@ public class Volunteer {
         return "Volunteer{name=" + name
                 + ", phone=" + phone
                 + ", email=" + email
-                + ", availableDate=" + availableDate
-                + ", startTimeAvailability=" + startTimeAvailability
-                + ", endTimeAvailability=" + endTimeAvailability + "}";
+                + ", availableDate=" + "}";
     }
 }

@@ -48,8 +48,6 @@ public class VolunteerCard extends UiPart<Region> {
         name.setText(volunteer.getName().fullName);
         phone.setText(volunteer.getPhone().value);
         email.setText(volunteer.getEmail().value);
-        date.setText(volunteer.getAvailableDate().toString());
-        time.setText(volunteer.getStartTimeAvailability() + "-" + volunteer.getEndTimeAvailability());
 
         // Bind the "involvedIn" label to update automatically when events change.
         involvedIn.textProperty().bind(

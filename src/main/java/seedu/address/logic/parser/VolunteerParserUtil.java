@@ -5,11 +5,9 @@ import static java.util.Objects.requireNonNull;
 import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.StringUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
-import seedu.address.model.volunteer.Date;
 import seedu.address.model.volunteer.Email;
 import seedu.address.model.volunteer.Name;
 import seedu.address.model.volunteer.Phone;
-import seedu.address.model.volunteer.Time;
 
 
 /**
@@ -66,22 +64,6 @@ public class VolunteerParserUtil {
     }
 
     /**
-     * Parses a given string as a {@code Date} and returns it after validation.
-     *
-     * @param date The date string to be parsed.
-     * @return A valid {@code Date} object.
-     * @throws ParseException If the given date does not conform to the date constraints.
-     */
-    public static Date parseDate(String date) throws ParseException {
-        requireNonNull(date);
-        String trimmedDate = date.trim();
-        if (!Date.isValidDate(trimmedDate)) {
-            throw new ParseException(Date.MESSAGE_CONSTRAINTS);
-        }
-        return new Date(trimmedDate);
-    }
-
-    /**
      * Parses a given string as an {@code Email} and returns it after validation.
      *
      * @param email The email string to be parsed.
@@ -96,23 +78,4 @@ public class VolunteerParserUtil {
         }
         return new Email(trimmedEmail);
     }
-
-    /**
-     * Parses a given string as a {@code Time} and returns it after validation.
-     *
-     * @param time The time string to be parsed.
-     * @return A valid {@code Time} object.
-     * @throws ParseException If the given time does not conform to the time constraints.
-     */
-    public static Time parseTime(String time) throws ParseException {
-        requireNonNull(time);
-        String trimmedTime = time.trim();
-        if (!seedu.address.model.volunteer.Time.isValidTime(trimmedTime)) {
-            throw new ParseException(seedu.address.model.volunteer.Time.MESSAGE_CONSTRAINTS);
-        }
-        return new Time(trimmedTime);
-    }
-
-
-
 }

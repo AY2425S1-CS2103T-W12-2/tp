@@ -41,10 +41,7 @@ public class ExportCommand extends Command {
             // Enclose fields to prevent commas from messing with CSV
             volunteerCsvOutput.append("\"").append(volunteer.getName()).append("\",")
                     .append(volunteer.getPhone()).append(",")
-                    .append(volunteer.getEmail()).append(",")
-                    .append(volunteer.getAvailableDate()).append(",")
-                    .append(volunteer.getStartTimeAvailability()).append(",")
-                    .append(volunteer.getEndTimeAvailability())
+                    .append(volunteer.getEmail())
                     .append("\n");
         }
 
