@@ -1,8 +1,9 @@
-package seedu.address.model.event;
+package seedu.address.model.event.predicates;
 
 import java.util.function.Predicate;
 
 import seedu.address.commons.util.ToStringBuilder;
+import seedu.address.model.event.Event;
 
 /**
  * Tests that a {@code Event}'s {@code volunteers} contains the volunteer name given.

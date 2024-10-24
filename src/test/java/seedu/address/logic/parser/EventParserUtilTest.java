@@ -1,13 +1,14 @@
 package seedu.address.logic.parser;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static seedu.address.logic.parser.EventParserUtil.MESSAGE_INVALID_INDEX;
+import static seedu.address.logic.parser.util.EventParserUtil.MESSAGE_INVALID_INDEX;
 import static seedu.address.testutil.Assert.assertThrows;
 import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST;
 
 import org.junit.jupiter.api.Test;
 
 import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.address.logic.parser.util.EventParserUtil;
 import seedu.address.model.event.Date;
 import seedu.address.model.event.Description;
 import seedu.address.model.event.EventName;

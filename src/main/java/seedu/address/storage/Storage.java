@@ -5,9 +5,9 @@ import java.nio.file.Path;
 import java.util.Optional;
 
 import seedu.address.commons.exceptions.DataLoadingException;
-import seedu.address.model.ReadOnlyAddressBook;
-import seedu.address.model.ReadOnlyUserPrefs;
-import seedu.address.model.UserPrefs;
+import seedu.address.model.managers.ReadOnlyAddressBook;
+import seedu.address.model.userpreference.ReadOnlyUserPrefs;
+import seedu.address.model.userpreference.UserPrefs;
 
 /**
  * API of the Storage component

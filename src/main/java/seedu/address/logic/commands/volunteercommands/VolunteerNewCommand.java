@@ -2,16 +2,16 @@ package seedu.address.logic.commands.volunteercommands;
 
 import static java.util.Objects.requireNonNull;
 import static seedu.address.logic.parser.AddressBookParser.VOLUNTEER_COMMAND_INDICATOR;
-import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_AVAILABLE_DATE;
-import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_EMAIL;
-import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_NAME;
-import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_PHONE;
+import static seedu.address.logic.parser.util.CliSyntax.VOLUNTEER_PREFIX_AVAILABLE_DATE;
+import static seedu.address.logic.parser.util.CliSyntax.VOLUNTEER_PREFIX_EMAIL;
+import static seedu.address.logic.parser.util.CliSyntax.VOLUNTEER_PREFIX_NAME;
+import static seedu.address.logic.parser.util.CliSyntax.VOLUNTEER_PREFIX_PHONE;
 
 import seedu.address.logic.Messages;
 import seedu.address.logic.commands.Command;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.model.Model;
+import seedu.address.model.managers.Model;
 import seedu.address.model.volunteer.Volunteer;
 
 /**

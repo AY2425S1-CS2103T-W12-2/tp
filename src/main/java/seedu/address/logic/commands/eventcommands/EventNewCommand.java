@@ -2,18 +2,18 @@ package seedu.address.logic.commands.eventcommands;
 
 import static java.util.Objects.requireNonNull;
 import static seedu.address.logic.parser.AddressBookParser.EVENT_COMMAND_INDICATOR;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_DATE;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_DESCRIPTION;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_END_TIME;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_LOCATION;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_NAME;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_START_TIME;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_DATE;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_DESCRIPTION;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_END_TIME;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_LOCATION;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_NAME;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_START_TIME;
 
 import seedu.address.logic.Messages;
 import seedu.address.logic.commands.Command;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.model.Model;
+import seedu.address.model.managers.Model;
 import seedu.address.model.event.Event;
 
 /**

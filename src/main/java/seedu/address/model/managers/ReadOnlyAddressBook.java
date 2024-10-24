@@ -1,4 +1,4 @@
-package seedu.address.model;
+package seedu.address.model.managers;
 
 import javafx.collections.ObservableList;
 import seedu.address.model.event.Event;

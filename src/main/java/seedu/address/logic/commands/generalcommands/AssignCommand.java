@@ -1,16 +1,18 @@
-package seedu.address.logic.commands;
+package seedu.address.logic.commands.generalcommands;
 
 import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
-import static seedu.address.logic.parser.CliSyntax.ASSIGN_EVENT_PREFIX_NAME;
-import static seedu.address.logic.parser.CliSyntax.ASSIGN_VOLUNTEER_PREFIX_NAME;
+import static seedu.address.logic.parser.util.CliSyntax.ASSIGN_EVENT_PREFIX_NAME;
+import static seedu.address.logic.parser.util.CliSyntax.ASSIGN_VOLUNTEER_PREFIX_NAME;
 
 import java.util.List;
 import java.util.logging.Logger;
 
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.Messages;
+import seedu.address.logic.commands.Command;
+import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.model.Model;
+import seedu.address.model.managers.Model;
 import seedu.address.model.event.Event;
 import seedu.address.model.exceptions.DuplicateAssignException;
 import seedu.address.model.exceptions.OverlappingAssignException;

@@ -6,6 +6,7 @@ import static seedu.address.testutil.Assert.assertThrows;
 import java.util.Collections;
 
 import org.junit.jupiter.api.Test;
+import seedu.address.model.managers.AddressBook;
 
 public class AddressBookTest {
 

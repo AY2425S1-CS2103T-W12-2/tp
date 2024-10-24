@@ -1,4 +1,4 @@
-package seedu.address.model;
+package seedu.address.model.managers;
 
 import java.nio.file.Path;
 import java.util.function.Predicate;
@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 import seedu.address.commons.core.GuiSettings;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.event.Event;
+import seedu.address.model.userpreference.ReadOnlyUserPrefs;
 import seedu.address.model.volunteer.Volunteer;
 
 /**

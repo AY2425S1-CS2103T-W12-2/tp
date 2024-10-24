@@ -1,10 +1,11 @@
-package seedu.address.model.event;
+package seedu.address.model.event.predicates;
 
 import java.util.List;
 import java.util.function.Predicate;
 
 import seedu.address.commons.util.StringUtil;
 import seedu.address.commons.util.ToStringBuilder;
+import seedu.address.model.event.Event;
 
 /**
  * Tests that a {@code Event}'s {@code Name} matches any of the keywords given.

@@ -1,19 +1,19 @@
 package seedu.address.logic.parser.volunteercommandparser;
 
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
-import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_AVAILABLE_DATE;
-import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_EMAIL;
-import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_NAME;
-import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_PHONE;
+import static seedu.address.logic.parser.util.CliSyntax.VOLUNTEER_PREFIX_AVAILABLE_DATE;
+import static seedu.address.logic.parser.util.CliSyntax.VOLUNTEER_PREFIX_EMAIL;
+import static seedu.address.logic.parser.util.CliSyntax.VOLUNTEER_PREFIX_NAME;
+import static seedu.address.logic.parser.util.CliSyntax.VOLUNTEER_PREFIX_PHONE;
 
 import java.util.stream.Stream;
 
 import seedu.address.logic.commands.volunteercommands.VolunteerNewCommand;
-import seedu.address.logic.parser.ArgumentMultimap;
-import seedu.address.logic.parser.ArgumentTokenizer;
+import seedu.address.logic.parser.util.ArgumentMultimap;
+import seedu.address.logic.parser.util.ArgumentTokenizer;
 import seedu.address.logic.parser.Parser;
-import seedu.address.logic.parser.Prefix;
-import seedu.address.logic.parser.VolunteerParserUtil;
+import seedu.address.logic.parser.util.Prefix;
+import seedu.address.logic.parser.util.VolunteerParserUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.volunteer.Date;
 import seedu.address.model.volunteer.Email;

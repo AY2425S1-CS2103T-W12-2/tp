@@ -8,15 +8,15 @@ import static seedu.address.testutil.Assert.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-import seedu.address.logic.commands.AssignCommand;
-import seedu.address.logic.commands.ExitCommand;
-import seedu.address.logic.commands.HelpCommand;
-import seedu.address.logic.commands.UnassignCommand;
+import seedu.address.logic.commands.generalcommands.AssignCommand;
+import seedu.address.logic.commands.generalcommands.ExitCommand;
+import seedu.address.logic.commands.generalcommands.HelpCommand;
+import seedu.address.logic.commands.generalcommands.UnassignCommand;
 import seedu.address.logic.commands.eventcommands.EventDeleteCommand;
 import seedu.address.logic.commands.eventcommands.EventNewCommand;
 import seedu.address.logic.commands.eventcommands.EventViewCommand;
-import seedu.address.logic.commands.eventcommands.FindEventCommand;
-import seedu.address.logic.commands.volunteercommands.FindVolunteerCommand;
+import seedu.address.logic.commands.eventcommands.EventFindCommand;
+import seedu.address.logic.commands.volunteercommands.VolunteerFindCommand;
 import seedu.address.logic.commands.volunteercommands.VolunteerDeleteCommand;
 import seedu.address.logic.commands.volunteercommands.VolunteerNewCommand;
 import seedu.address.logic.commands.volunteercommands.VolunteerViewCommand;
@@ -73,10 +73,10 @@ public class AddressBookParserTest {
     @Test
     public void parseCommand_findEvent() throws Exception {
         String keyword = "food";
-        FindEventCommand command = (FindEventCommand) parser.parseCommand(
+        EventFindCommand command = (EventFindCommand) parser.parseCommand(
                 createCommand(AddressBookParser.EVENT_COMMAND_INDICATOR,
-                    FindEventCommand.COMMAND_WORD, keyword));
-        assertEquals(new FindEventCommand(keyword), command);
+                    EventFindCommand.COMMAND_WORD, keyword));
+        assertEquals(new EventFindCommand(keyword), command);
     }
     @Test
     public void parseCommand_newVolunteer() throws Exception {
@@ -107,10 +107,10 @@ public class AddressBookParserTest {
 
     @Test void parseCommand_findVolunteer() throws Exception {
         String keyword = "john";
-        FindVolunteerCommand command = (FindVolunteerCommand) parser.parseCommand(
+        VolunteerFindCommand command = (VolunteerFindCommand) parser.parseCommand(
                 createCommand(AddressBookParser.VOLUNTEER_COMMAND_INDICATOR,
-                    FindVolunteerCommand.COMMAND_WORD, keyword));
-        assertEquals(new FindVolunteerCommand(keyword), command);
+                    VolunteerFindCommand.COMMAND_WORD, keyword));
+        assertEquals(new VolunteerFindCommand(keyword), command);
     }
 
     @Test

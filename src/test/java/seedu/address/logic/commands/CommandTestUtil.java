@@ -2,19 +2,19 @@ package seedu.address.logic.commands;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_DATE;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_DESCRIPTION;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_END_TIME;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_LOCATION;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_NAME;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_START_TIME;
-import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_AVAILABLE_DATE;
-import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_EMAIL;
-import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_NAME;
-import static seedu.address.logic.parser.CliSyntax.VOLUNTEER_PREFIX_PHONE;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_DATE;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_DESCRIPTION;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_END_TIME;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_LOCATION;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_NAME;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_START_TIME;
+import static seedu.address.logic.parser.util.CliSyntax.VOLUNTEER_PREFIX_AVAILABLE_DATE;
+import static seedu.address.logic.parser.util.CliSyntax.VOLUNTEER_PREFIX_EMAIL;
+import static seedu.address.logic.parser.util.CliSyntax.VOLUNTEER_PREFIX_NAME;
+import static seedu.address.logic.parser.util.CliSyntax.VOLUNTEER_PREFIX_PHONE;
 
 import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.model.Model;
+import seedu.address.model.managers.Model;
 
 /**
  * Contains helper methods for testing commands.

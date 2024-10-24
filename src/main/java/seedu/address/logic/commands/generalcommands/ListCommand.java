@@ -1,8 +1,10 @@
-package seedu.address.logic.commands;
+package seedu.address.logic.commands.generalcommands;
 
 import static java.util.Objects.requireNonNull;
 
-import seedu.address.model.Model;
+import seedu.address.logic.commands.Command;
+import seedu.address.logic.commands.CommandResult;
+import seedu.address.model.managers.Model;
 
 /**
  * Resets volunteer and events display.

@@ -1,4 +1,4 @@
-package seedu.address.model;
+package seedu.address.model.managers;
 
 import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
@@ -13,11 +13,13 @@ import seedu.address.commons.core.GuiSettings;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.event.Event;
-import seedu.address.model.event.EventParticipatedByVolunteerPredicate;
+import seedu.address.model.event.predicates.EventParticipatedByVolunteerPredicate;
 import seedu.address.model.exceptions.DuplicateAssignException;
 import seedu.address.model.exceptions.OverlappingAssignException;
+import seedu.address.model.userpreference.ReadOnlyUserPrefs;
+import seedu.address.model.userpreference.UserPrefs;
 import seedu.address.model.volunteer.Volunteer;
-import seedu.address.model.volunteer.VolunteerInvolvedInEventPredicate;
+import seedu.address.model.volunteer.predicates.VolunteerInvolvedInEventPredicate;
 
 /**
  * Represents the in-memory model of the address book data.

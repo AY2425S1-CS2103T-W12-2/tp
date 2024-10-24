@@ -1,21 +1,21 @@
 package seedu.address.logic.parser.eventcommandparser;
 
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_DATE;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_DESCRIPTION;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_END_TIME;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_LOCATION;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_NAME;
-import static seedu.address.logic.parser.CliSyntax.EVENT_PREFIX_START_TIME;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_DATE;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_DESCRIPTION;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_END_TIME;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_LOCATION;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_NAME;
+import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_START_TIME;
 
 import java.util.stream.Stream;
 
 import seedu.address.logic.commands.eventcommands.EventNewCommand;
-import seedu.address.logic.parser.ArgumentMultimap;
-import seedu.address.logic.parser.ArgumentTokenizer;
-import seedu.address.logic.parser.EventParserUtil;
+import seedu.address.logic.parser.util.ArgumentMultimap;
+import seedu.address.logic.parser.util.ArgumentTokenizer;
+import seedu.address.logic.parser.util.EventParserUtil;
 import seedu.address.logic.parser.Parser;
-import seedu.address.logic.parser.Prefix;
+import seedu.address.logic.parser.util.Prefix;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.event.Date;
 import seedu.address.model.event.Description;

@@ -1,6 +1,8 @@
-package seedu.address.logic.commands;
+package seedu.address.logic.commands.generalcommands;
 
-import seedu.address.model.Model;
+import seedu.address.logic.commands.Command;
+import seedu.address.logic.commands.CommandResult;
+import seedu.address.model.managers.Model;
 
 /**
  * Format full help instructions for every command for display.

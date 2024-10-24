@@ -1,7 +1,7 @@
 package seedu.address.model.util;
 
-import seedu.address.model.AddressBook;
-import seedu.address.model.ReadOnlyAddressBook;
+import seedu.address.model.managers.AddressBook;
+import seedu.address.model.managers.ReadOnlyAddressBook;
 import seedu.address.model.event.Event;
 import seedu.address.model.event.EventName;
 import seedu.address.model.event.Location;

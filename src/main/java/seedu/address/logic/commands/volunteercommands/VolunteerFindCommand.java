@@ -1,7 +1,7 @@
 package seedu.address.logic.commands.volunteercommands;
 
 import static java.util.Objects.requireNonNull;
-import static seedu.address.model.Model.PREDICATE_SHOW_ALL_VOLUNTEERS;
+import static seedu.address.model.managers.Model.PREDICATE_SHOW_ALL_VOLUNTEERS;
 
 import java.util.function.Predicate;
 
@@ -9,13 +9,13 @@ import javafx.collections.ObservableList;
 import seedu.address.logic.commands.Command;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.model.Model;
+import seedu.address.model.managers.Model;
 import seedu.address.model.volunteer.Volunteer;
 
 /**
  * Finds volunteers whose names start with the specified prefix (case-insensitive).
  */
-public class FindVolunteerCommand extends Command {
+public class VolunteerFindCommand extends Command {
 
     public static final String COMMAND_WORD = "find";
 
@@ -34,7 +34,7 @@ public class FindVolunteerCommand extends Command {
      *
      * @param prefix The prefix to search for.
      */
-    public FindVolunteerCommand(String prefix) {
+    public VolunteerFindCommand(String prefix) {
         requireNonNull(prefix);
         this.searchString = prefix.trim();
     }
@@ -71,11 +71,11 @@ public class FindVolunteerCommand extends Command {
             return true;
         }
 
-        if (!(other instanceof FindVolunteerCommand)) {
+        if (!(other instanceof VolunteerFindCommand)) {
             return false;
         }
 
-        FindVolunteerCommand otherFindCommand = (FindVolunteerCommand) other;
+        VolunteerFindCommand otherFindCommand = (VolunteerFindCommand) other;
         return searchString.equals(otherFindCommand.searchString);
     }
 

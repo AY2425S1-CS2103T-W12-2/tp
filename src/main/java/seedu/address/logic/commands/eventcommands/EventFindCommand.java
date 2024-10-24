@@ -1,7 +1,7 @@
 package seedu.address.logic.commands.eventcommands;
 
 import static java.util.Objects.requireNonNull;
-import static seedu.address.model.Model.PREDICATE_SHOW_ALL_EVENTS;
+import static seedu.address.model.managers.Model.PREDICATE_SHOW_ALL_EVENTS;
 
 import java.util.function.Predicate;
 
@@ -9,13 +9,13 @@ import javafx.collections.ObservableList;
 import seedu.address.logic.commands.Command;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.model.Model;
+import seedu.address.model.managers.Model;
 import seedu.address.model.event.Event;
 
 /**
  * Finds events whose names start with the specified prefix (case-insensitive).
  */
-public class FindEventCommand extends Command {
+public class EventFindCommand extends Command {
 
     public static final String COMMAND_WORD = "find";
 
@@ -34,7 +34,7 @@ public class FindEventCommand extends Command {
      *
      * @param searchString The string to search for.
      */
-    public FindEventCommand(String searchString) {
+    public EventFindCommand(String searchString) {
         requireNonNull(searchString);
         this.searchString = searchString.trim();
     }
@@ -71,11 +71,11 @@ public class FindEventCommand extends Command {
             return true;
         }
 
-        if (!(other instanceof FindEventCommand)) {
+        if (!(other instanceof EventFindCommand)) {
             return false;
         }
 
-        FindEventCommand otherFindCommand = (FindEventCommand) other;
+        EventFindCommand otherFindCommand = (EventFindCommand) other;
         return searchString.equals(otherFindCommand.searchString);
     }
 

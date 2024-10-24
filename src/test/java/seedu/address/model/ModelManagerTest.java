@@ -9,6 +9,9 @@ import java.nio.file.Paths;
 import org.junit.jupiter.api.Test;
 
 import seedu.address.commons.core.GuiSettings;
+import seedu.address.model.managers.AddressBook;
+import seedu.address.model.managers.ModelManager;
+import seedu.address.model.userpreference.UserPrefs;
 
 public class ModelManagerTest {
 

@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import seedu.address.model.AddressBook;
+import seedu.address.model.managers.AddressBook;
 import seedu.address.model.event.Event;
 import seedu.address.model.event.exceptions.ChronologicalOrderException;
 

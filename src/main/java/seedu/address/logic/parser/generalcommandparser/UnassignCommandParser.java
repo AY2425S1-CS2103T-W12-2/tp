@@ -1,14 +1,20 @@
-package seedu.address.logic.parser;
+package seedu.address.logic.parser.generalcommandparser;
 
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
-import static seedu.address.logic.parser.CliSyntax.UNASSIGN_EVENT_PREFIX_NAME;
-import static seedu.address.logic.parser.CliSyntax.UNASSIGN_VOLUNTEER_PREFIX_NAME;
+import static seedu.address.logic.parser.util.CliSyntax.UNASSIGN_EVENT_PREFIX_NAME;
+import static seedu.address.logic.parser.util.CliSyntax.UNASSIGN_VOLUNTEER_PREFIX_NAME;
 
 import java.util.stream.Stream;
 
 import seedu.address.commons.core.index.Index;
-import seedu.address.logic.commands.UnassignCommand;
+import seedu.address.logic.commands.generalcommands.UnassignCommand;
+import seedu.address.logic.parser.Parser;
 import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.address.logic.parser.util.ArgumentMultimap;
+import seedu.address.logic.parser.util.ArgumentTokenizer;
+import seedu.address.logic.parser.util.EventParserUtil;
+import seedu.address.logic.parser.util.Prefix;
+import seedu.address.logic.parser.util.VolunteerParserUtil;
 
 /**
  * Parses input arguments and creates a new UnassignCommand object.
