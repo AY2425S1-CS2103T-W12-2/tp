@@ -5,8 +5,8 @@ import java.nio.file.Path;
 import java.util.Optional;
 
 import seedu.address.commons.exceptions.DataLoadingException;
-import seedu.address.model.managers.ReadOnlyAddressBook;
 import seedu.address.model.managers.AddressBook;
+import seedu.address.model.managers.ReadOnlyAddressBook;
 
 /**
  * Represents a storage for {@link AddressBook}.

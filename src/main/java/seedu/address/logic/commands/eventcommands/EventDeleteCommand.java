@@ -10,8 +10,8 @@ import seedu.address.logic.Messages;
 import seedu.address.logic.commands.Command;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.model.managers.Model;
 import seedu.address.model.event.Event;
+import seedu.address.model.managers.Model;
 
 /**
  * Deletes a person identified using it's displayed index from the address book.

@@ -8,16 +8,16 @@ import static seedu.address.testutil.Assert.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
+import seedu.address.logic.commands.eventcommands.EventDeleteCommand;
+import seedu.address.logic.commands.eventcommands.EventFindCommand;
+import seedu.address.logic.commands.eventcommands.EventNewCommand;
+import seedu.address.logic.commands.eventcommands.EventViewCommand;
 import seedu.address.logic.commands.generalcommands.AssignCommand;
 import seedu.address.logic.commands.generalcommands.ExitCommand;
 import seedu.address.logic.commands.generalcommands.HelpCommand;
 import seedu.address.logic.commands.generalcommands.UnassignCommand;
-import seedu.address.logic.commands.eventcommands.EventDeleteCommand;
-import seedu.address.logic.commands.eventcommands.EventNewCommand;
-import seedu.address.logic.commands.eventcommands.EventViewCommand;
-import seedu.address.logic.commands.eventcommands.EventFindCommand;
-import seedu.address.logic.commands.volunteercommands.VolunteerFindCommand;
 import seedu.address.logic.commands.volunteercommands.VolunteerDeleteCommand;
+import seedu.address.logic.commands.volunteercommands.VolunteerFindCommand;
 import seedu.address.logic.commands.volunteercommands.VolunteerNewCommand;
 import seedu.address.logic.commands.volunteercommands.VolunteerViewCommand;
 import seedu.address.logic.parser.exceptions.ParseException;

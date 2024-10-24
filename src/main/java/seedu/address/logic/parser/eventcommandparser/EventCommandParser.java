@@ -9,11 +9,11 @@ import java.util.regex.Pattern;
 
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.logic.commands.Command;
-import seedu.address.logic.commands.generalcommands.HelpCommand;
 import seedu.address.logic.commands.eventcommands.EventDeleteCommand;
+import seedu.address.logic.commands.eventcommands.EventFindCommand;
 import seedu.address.logic.commands.eventcommands.EventNewCommand;
 import seedu.address.logic.commands.eventcommands.EventViewCommand;
-import seedu.address.logic.commands.eventcommands.EventFindCommand;
+import seedu.address.logic.commands.generalcommands.HelpCommand;
 import seedu.address.logic.parser.AddressBookParser;
 import seedu.address.logic.parser.exceptions.ParseException;
 

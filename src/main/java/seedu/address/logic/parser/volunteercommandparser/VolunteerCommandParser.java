@@ -10,8 +10,8 @@ import java.util.regex.Pattern;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.logic.commands.Command;
 import seedu.address.logic.commands.generalcommands.HelpCommand;
-import seedu.address.logic.commands.volunteercommands.VolunteerFindCommand;
 import seedu.address.logic.commands.volunteercommands.VolunteerDeleteCommand;
+import seedu.address.logic.commands.volunteercommands.VolunteerFindCommand;
 import seedu.address.logic.commands.volunteercommands.VolunteerNewCommand;
 import seedu.address.logic.commands.volunteercommands.VolunteerViewCommand;
 import seedu.address.logic.parser.AddressBookParser;
@@ -55,7 +55,7 @@ public class VolunteerCommandParser {
         case VolunteerDeleteCommand.COMMAND_WORD:
             return new VolunteerDeleteCommandParser().parse(arguments);
         case VolunteerFindCommand.COMMAND_WORD:
-            return new FindVolunteerCommandParser().parse(arguments);
+            return new VolunteerFindCommandParser().parse(arguments);
         case VolunteerViewCommand.COMMAND_WORD:
             return new VolunteerViewCommandParser().parse(arguments);
         default:

@@ -11,12 +11,12 @@ import static seedu.address.logic.parser.util.CliSyntax.EVENT_PREFIX_START_TIME;
 import java.util.stream.Stream;
 
 import seedu.address.logic.commands.eventcommands.EventNewCommand;
+import seedu.address.logic.parser.Parser;
+import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.logic.parser.util.ArgumentMultimap;
 import seedu.address.logic.parser.util.ArgumentTokenizer;
 import seedu.address.logic.parser.util.EventParserUtil;
-import seedu.address.logic.parser.Parser;
 import seedu.address.logic.parser.util.Prefix;
-import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.event.Date;
 import seedu.address.model.event.Description;
 import seedu.address.model.event.Event;

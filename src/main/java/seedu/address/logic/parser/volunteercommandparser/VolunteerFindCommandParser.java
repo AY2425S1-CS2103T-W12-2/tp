@@ -9,7 +9,7 @@ import seedu.address.logic.parser.exceptions.ParseException;
 /**
  * Parses input arguments and creates a new FindVolunteerCommand object.
  */
-public class FindVolunteerCommandParser implements Parser<VolunteerFindCommand> {
+public class VolunteerFindCommandParser implements Parser<VolunteerFindCommand> {
 
     /**
      * Parses the given {@code String} of arguments in the context of the FindVolunteerCommand
