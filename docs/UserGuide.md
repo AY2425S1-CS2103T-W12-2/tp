@@ -119,6 +119,7 @@ Format: `help`
 
 ### Listing All Activities : `list`
 
+
 Want to see everyone and everything? The `list` command shows all your volunteers and events. It's especially useful after you've been searching or filtering - it brings back the full view.
 
 Format: `list`
@@ -131,6 +132,7 @@ Need to share your records or print them out? The `export` command saves everyth
 
 Format: `export`
 
+
 After using this command:
 1. Look for a new folder called `/output` where you keep VolunSync
 2. You'll find two files:
@@ -140,6 +142,7 @@ After using this command:
 ![Exported Files](images/ExportCommand.png)
 
 ### Closing the Program : `exit`
+
 
 Ready to finish up? Just type `exit` to close VolunSync safely.
 
@@ -158,9 +161,8 @@ What you'll need:
 - Phone Number: Just numbers (3-15 digits)
 - Email: Standard email format (like name@email.com)
 - Date: YYYY-MM-DD (like 2024-01-01)
+* `/v new n/John Doe p/91234567 em/john@gmail.com d/2024-02-02` <br/>creates a volunteer record for `John Doe` with the specified details
 
-Example:
-* `/v new n/Mary Tan p/91234567 em/mary@gmail.com d/2024-02-02`
 
 ![Adding a Volunteer](images/NewVolunteer.png)
 
@@ -176,7 +178,7 @@ Tips:
 * If no one is found, you'll see all volunteers again
 
 Example:
-* `/v find tan` might find `Mary Tan`, `Tanya Lee`, and `Stanley Tan`
+* `/v find ng` returns `David Ng`, `Alice Wong` and `Jason Wang`
 
 ![Finding Volunteers](images/commandDemo/FindVolunteerDemo.png)
 
@@ -294,7 +296,7 @@ Tips:
 * If nothing matches, you'll see all events again
 
 Example:
-* `/e find garden` might find `Garden Party` and `Community Garden`
+* `/e find beach` returns `Beach Cleanup` and `beach clean2`
 
 ![Finding Events](images/commandDemo/FindEventDemo.png)
 
