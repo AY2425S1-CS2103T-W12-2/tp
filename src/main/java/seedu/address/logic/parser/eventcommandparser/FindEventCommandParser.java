@@ -6,7 +6,6 @@ import seedu.address.logic.commands.eventcommands.FindEventCommand;
 import seedu.address.logic.commands.volunteercommands.FindVolunteerCommand;
 import seedu.address.logic.parser.EventParserUtil;
 import seedu.address.logic.parser.Parser;
-import seedu.address.logic.parser.VolunteerParserUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
 
 /**

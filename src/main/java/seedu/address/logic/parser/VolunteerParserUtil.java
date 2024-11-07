@@ -141,9 +141,6 @@ public class VolunteerParserUtil {
     public static String parseSearchVolunteerName(String searchTerm) throws ParseException {
         requireNonNull(searchTerm);
         searchTerm = searchTerm.trim();
-        if (searchTerm.isEmpty()) {
-            throw new ParseException("The search term cannot be empty!");
-        }
 
         if (!searchTerm.matches(Name.VALIDATION_REGEX)) {
             throw new ParseException(Name.MESSAGE_CONSTRAINTS);
