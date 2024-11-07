@@ -10,6 +10,7 @@ import seedu.address.model.event.Description;
 import seedu.address.model.event.EventName;
 import seedu.address.model.event.Location;
 import seedu.address.model.event.Time;
+import seedu.address.model.volunteer.Name;
 
 
 /**
@@ -127,4 +128,18 @@ public class EventParserUtil {
         return new Description(trimmedDescription);
     }
 
+    public static String parseSearchEventName(String searchTerm) throws ParseException {
+        requireNonNull(searchTerm);
+        searchTerm = searchTerm.trim();
+        if (searchTerm.isEmpty()) {
+            throw new ParseException("The search term cannot be empty!");
+        }
+
+        if (!searchTerm.matches(EventName.VALIDATION_REGEX)) {
+            throw new ParseException(EventName.MESSAGE_CONSTRAINTS);
+        }
+
+        return searchTerm;
+    }
+    }
 }

@@ -19,7 +19,7 @@ public class FindVolunteerCommandParser implements Parser<FindVolunteerCommand> 
      */
     public FindVolunteerCommand parse(String args) throws ParseException {
         try {
-            String searchTerm = VolunteerParserUtil.parseSearchTerm(args);
+            String searchTerm = VolunteerParserUtil.parseSearchVolunteerName(args);
             return new FindVolunteerCommand(searchTerm);
         } catch (ParseException pe) {
             throw new ParseException(

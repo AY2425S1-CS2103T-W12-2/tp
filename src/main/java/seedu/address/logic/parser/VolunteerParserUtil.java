@@ -138,11 +138,11 @@ public class VolunteerParserUtil {
      * @return A valid search term as a string object.
      * @throws ParseException If the given search term does not conform to Name's constraints.
      */
-    public static String parseSearchTerm(String searchTerm) throws ParseException {
+    public static String parseSearchVolunteerName(String searchTerm) throws ParseException {
         requireNonNull(searchTerm);
         searchTerm = searchTerm.trim();
         if (searchTerm.isEmpty()) {
-            throw new ParseException("Names cannot be empty!");
+            throw new ParseException("The search term cannot be empty!");
         }
 
         if (!searchTerm.matches(Name.VALIDATION_REGEX)) {

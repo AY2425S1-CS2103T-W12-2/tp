@@ -3,7 +3,10 @@ package seedu.address.logic.parser.eventcommandparser;
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 
 import seedu.address.logic.commands.eventcommands.FindEventCommand;
+import seedu.address.logic.commands.volunteercommands.FindVolunteerCommand;
+import seedu.address.logic.parser.EventParserUtil;
 import seedu.address.logic.parser.Parser;
+import seedu.address.logic.parser.VolunteerParserUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
 
 /**
@@ -17,12 +20,12 @@ public class FindEventCommandParser implements Parser<FindEventCommand> {
      * @throws ParseException if the user input does not conform to the expected format
      */
     public FindEventCommand parse(String args) throws ParseException {
-        String trimmedArgs = args.trim();
-        if (trimmedArgs.isEmpty()) {
-            throw new ParseException(
-                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindEventCommand.MESSAGE_USAGE));
+        try {
+            String searchTerm = EventParserUtil.parseSearchEventName(args);
+            return new FindEventCommand(searchTerm);
+        } catch (ParseException pe) {
+            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT,
+                    FindVolunteerCommand.MESSAGE_USAGE));
         }
-
-        return new FindEventCommand(trimmedArgs);
     }
 }
